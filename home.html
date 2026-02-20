@@ -88,7 +88,7 @@
 
 
         <!-- Add Money Section  -->
-        <section class="w-11/12 mx-auto pt-6 hidden">
+        <section id="add-money" class="w-11/12 mx-auto pt-6">
             <div>
                 <h2 class=" text-xl font-bold">Add Money</h2>
             </div>
@@ -98,15 +98,16 @@
                 
                 
                 <label class="text-neutral font-bold text-base" for="bank">Select a Bank</label>    
-                <select class="select w-full rounded-full">
-                    <option disabled selected>Pick a color</option>
+                <select id="add-bank-account" class="select w-full rounded-full">
+                    <option disabled selected>Add a Bank</option>
+                    <option>Dutch Bangla Bank</option>
                     <option>Sonali Bank</option>
                     <option>Islami Bank</option>
                     <option>Janata Bank</option>
                 </select>
 
                 <label class="label text-neutral font-bold text-base" for="mobile ">Bank Acount Number</label>
-                <input id="input-acount-number" maxlength="11" minlength="11" type="text" id="mobile " name="mobile " class="input w-full rounded-full" placeholder="Enter your number" />
+                <input id="input-account-number" maxlength="11" minlength="11" type="text" id="mobile " name="mobile " class="input w-full rounded-full" placeholder="Enter your number" />
 
 
                 <label class="label text-neutral font-bold text-base" for="amount">Amount Add</label>
@@ -114,17 +115,17 @@
 
 
                 <label class="label text-neutral font-bold text-base" for="password">Password</label>
-                <input id="input-pin" maxlength="4" type="password" id="password" name="password" class="input w-full rounded-full" placeholder="Password" />
+                <input id="input-add-money-password" maxlength="4" type="password" id="password" name="password" class="input w-full rounded-full" placeholder="Password" />
 
 
-                <button type="button" id="add-btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
+                <button type="button" id="add-money-btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
                 </fieldset>
             </form>
         </section>
 
 
         <!-- Cash out -->
-        <section class="w-11/12 mx-auto pt-6">
+        <section id="cash-out" class="w-11/12 mx-auto pt-6">
             <div>
                 <h2 class=" text-xl font-bold">Cash Out</h2>
             </div>
@@ -154,6 +155,7 @@
 
 
     <script src="Script/machine.js"></script>
+    <script src="Script/addMoney.js"></script>
     <script src="Script/cashout-connect-machine.js"></script>
     <script src="Script/cashout.js"></script>
 </body>
