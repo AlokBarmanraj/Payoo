@@ -4,7 +4,7 @@ function getValueFormInput (id){
     const value = input.value;
     console.log(id, value);
     return value;
-}
+};
 
 
 // machine -> Balance
@@ -13,14 +13,14 @@ function getBalance (){
     const balance = balanceElement.innerText;
     console.log("currant-balance", Number(balance));
     return Number(balance)
-}
+};
 
 
 // machine value -> set balance
 function setBalance (value){
     const balanceElement = document.getElementById("currant-balance");
      balanceElement.innerText = value;
-}
+};
 
 
 
@@ -30,7 +30,8 @@ function getShowOnly (id){
     const addMoney = document.getElementById("add-money");
     const cashOut = document.getElementById("cash-out");
     const TransferMoney = document.getElementById("transfer-money");
-    const getBonus = document.getElementById("get-bonus")
+    const getBonus = document.getElementById("get-bonus");
+    const payBill = document.getElementById("pay-bill");
     const transactionsHistory = document.getElementById("transactions-history");
 
 
@@ -40,10 +41,11 @@ function getShowOnly (id){
     cashOut.classList.add("hidden");
     TransferMoney.classList.add("hidden");
     getBonus.classList.add("hidden");
+    payBill.classList.add("hidden");
     transactionsHistory.classList.add("hidden");
 
 
     // show kore dao id wala element
     const selected = document.getElementById(id);
     selected.classList.remove("hidden");
-}
+};

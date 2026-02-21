@@ -52,4 +52,4 @@ document.getElementById("transfer-money-btn").addEventListener("click", function
         alert("Invalid Password 👇");
         return;
     }
-})
+});

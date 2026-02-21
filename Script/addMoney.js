@@ -11,7 +11,7 @@ document.getElementById("add-money-btn").addEventListener("click", function(){
     if(bankNumber.length !=11){
         alert("Invalid Bank Number");
         return;
-    }
+    };
 
     // 3- Add Amount
     const addAmount = getValueFormInput ("input-amount");
@@ -22,6 +22,7 @@ document.getElementById("add-money-btn").addEventListener("click", function(){
     // 5- Invalid pin set
     const password = getValueFormInput("input-add-money-password");
     if(password === "1234"){
+        // 5.1- true ::> show an alert > set Balance
         alert(`Add Money Successful ${addAmount} Taka from 
             ${bankAccount} 
             at ${new Date()}`);
@@ -48,6 +49,7 @@ document.getElementById("add-money-btn").addEventListener("click", function(){
         history.append(newHistory);
     }
     else{
+        // 5.2- false ::> show ERROR alert > return
         alert("Invalid Password");
         return;
     }

@@ -33,7 +33,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function(){
             at ${new Date()}👍`)
         setBalance (newBalance);
 
-        
+
         // 1- history container ka niya asbo
         const history = document.getElementById("history-section");
 
@@ -57,4 +57,4 @@ document.getElementById("withdraw-btn").addEventListener("click", function(){
         alert("Invalid Password 👇");
         return;
     }
-})
+});

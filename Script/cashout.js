@@ -42,5 +42,5 @@ document.getElementById("withdraw-btn").addEventListener("click", function(){
         alert("Invalid Pin 👇");
         return;
     }
-})
+});
 */
