@@ -33,7 +33,7 @@
 
         <!-- Balance Section -->
         <section class="w-11/12 flex pt-7 mx-auto items-center justify-between">
-            <div class="flex">
+            <div onclick="getShowOnly('latest-payment')" class="flex cursor-pointer">
                 <img class="w-16" src="Images/logo.png" alt="">
                 <div>
                     <h2 class="text-2xl font-bold">$ <span id="currant-balance">45000</span></h2>
@@ -58,17 +58,17 @@
 
         <!-- Card Section -->
         <section class="w-11/12 mx-auto pt-8 grid grid-cols-3 gap-3">
-            <button class="btn flex-col py-12 rounded-xl">
+            <button onclick="getShowOnly('add-money')" class="btn flex-col py-12 rounded-xl">
                 <img src="Images/opt-1.png" alt="">
                 <p>Add Money</p>
             </button>
           
-            <button class="btn flex-col py-12 rounded-xl">
+            <button onclick="getShowOnly('cash-out')" class="btn flex-col py-12 rounded-xl">
                 <img src="Images/opt-2.png" alt="">
                 <p>Cash Out</p>
             </button>
 
-            <button class="btn flex-col py-12 rounded-xl">
+            <button onclick="getShowOnly('transfer-money')" class="btn flex-col py-12 rounded-xl">
                 <img src="Images/opt-3.png" alt="">
                 <p>Transfer Money</p>
             </button>
@@ -80,11 +80,72 @@
                 <img src="Images/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
-            <button class="btn flex-col py-12 rounded-xl">
+            <button onclick="getShowOnly('transactions-history')" class="btn flex-col py-12 rounded-xl">
                 <img src="Images/opt-6.png" alt="">
                 <p>Transactions</p>
             </button>
         </section>
+
+
+        <!-- Latest Payment -->
+         <section id="latest-payment" class="w-11/12 mx-auto pt-5">
+            <div class="flex justify-between">
+                <h2 class="font-bold">Latest Payment</h2>
+                <p class="text-slate-400">View All</p>
+            </div>
+
+
+            <div class="flex justify-between bg-white p-2 items-center rounded-xl mt-4">
+                <div class="flex gap-1">
+                    <img class="bg-slate-300 p-3 rounded-full" src="Images/opt-1.png" alt="">
+                    <div>
+                        <h2 class="text-xl font-semibold">Electricity Bill</h2>
+                        <p class="text-slate-500">Today 01:44 AM</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="flex justify-between bg-white p-2 items-center rounded-xl mt-4">
+                <div class="flex gap-1">
+                    <img class="bg-slate-300 p-3 rounded-full" src="Images/opt-1.png" alt="">
+                    <div>
+                        <h2 class="text-xl font-semibold">Electricity Bill</h2>
+                        <p class="text-slate-500">Today 01:44 AM</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="flex justify-between bg-white p-2 items-center rounded-xl mt-4">
+                <div class="flex gap-1">
+                    <img class="bg-slate-300 p-3 rounded-full" src="Images/opt-1.png" alt="">
+                    <div>
+                        <h2 class="text-xl font-semibold">Electricity Bill</h2>
+                        <p class="text-slate-500">Today 01:44 AM</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="flex justify-between bg-white p-2 items-center rounded-xl mt-4">
+                <div class="flex gap-1">
+                    <img class="bg-slate-300 p-3 rounded-full" src="Images/opt-1.png" alt="">
+                    <div>
+                        <h2 class="text-xl font-semibold">Electricity Bill</h2>
+                        <p class="text-slate-500">Today 01:44 AM</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+         </section>
+
+
 
 
         <!-- Add Money Section  -->
@@ -151,12 +212,57 @@
             </form>
         </section>
 
+
+
+
+        <!-- Transfer Money -->
+        <section id="transfer-money" class="w-11/12 mx-auto pt-6">
+            <div>
+                <h2 class=" text-xl font-bold">Transfer Money</h2>
+            </div>
+
+            <form class="pt-2">
+                <fieldset class="fieldset bg-base-100 border-base-300 rounded-2xl border mx-auto p-4" >
+                
+
+                <label class="label text-neutral font-bold text-base" for="mobile ">User Account Number</label>
+                <input id="input-user-number" maxlength="11" minlength="11" type="text" id="mobile " name="mobile " class="input w-full rounded-full" placeholder="Enter your number" />
+
+
+                <label class="label text-neutral font-bold text-base" for="amount">Amount</label>
+                <input id="user-amount" type="number" id="amount" name="amount" class="input w-full rounded-full" placeholder="Add amount" />
+
+
+                <label class="label text-neutral font-bold text-base" for="password">Password</label>
+                <input id="transfer-pin" maxlength="4" type="password" id="password" name="password" class="input w-full rounded-full" placeholder="Password" />
+
+
+                <button type="button" id="transfer-money-btn" class="btn btn-primary mt-4 rounded-full">Send Money</button>
+                </fieldset>
+            </form>
+        </section>
+
+
+
+        <!-- Transactions-History -->
+        <section id="transactions-history" class="w-11/12 mx-auto pt-5">
+            <div class="flex justify-between">
+                <h2 class=" text-xl font-bold">Transactions History</h2>
+                <p class="text-slate-400">View All</p>
+            </div>
+
+            <div class="" id="history-section">
+
+            </div>
+        </section>
+
     </header>
 
 
     <script src="Script/machine.js"></script>
     <script src="Script/addMoney.js"></script>
     <script src="Script/cashout-connect-machine.js"></script>
+    <script src="Script/transferMoney.js"></script>
     <script src="Script/cashout.js"></script>
 </body>
 </html>

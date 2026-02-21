@@ -22,12 +22,34 @@ document.getElementById("add-money-btn").addEventListener("click", function(){
     // 5- Invalid pin set
     const password = getValueFormInput("input-add-money-password");
     if(password === "1234"){
-        alert("Add Money Successful")
+        alert(`Add Money Successful ${addAmount} Taka from 
+            ${bankAccount} 
+            at ${new Date()}`);
         setBalance (newAddBalance)
+
+
+        // 1- history container ka niya asbo
+        const history = document.getElementById("history-section");
+
+        // 2- new div create korbo
+        const newHistory = document.createElement("div");
+
+        // 3- new div innerHtml add korbo
+        newHistory .innerHTML=` 
+            <div class=" mt-5 p-5 bg-base-100">
+            Add Money Successful ${addAmount} Taka from 
+            ${bankAccount}
+            Bank Account Number ${bankNumber} 
+            at ${new Date()} 
+            </div>
+            `;
+
+        // 4- history container new div append korbo
+        history.append(newHistory);
     }
     else{
         alert("Invalid Password");
         return;
     }
 
-})
+});
