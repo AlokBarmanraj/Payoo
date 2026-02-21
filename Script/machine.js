@@ -29,7 +29,8 @@ function getShowOnly (id){
     const latestPayment = document.getElementById("latest-payment");
     const addMoney = document.getElementById("add-money");
     const cashOut = document.getElementById("cash-out");
-    const TransferMoney = document.getElementById("transfer-money")
+    const TransferMoney = document.getElementById("transfer-money");
+    const getBonus = document.getElementById("get-bonus")
     const transactionsHistory = document.getElementById("transactions-history");
 
 
@@ -38,6 +39,7 @@ function getShowOnly (id){
     addMoney.classList.add("hidden");
     cashOut.classList.add("hidden");
     TransferMoney.classList.add("hidden");
+    getBonus.classList.add("hidden");
     transactionsHistory.classList.add("hidden");
 
 
